@@ -1,0 +1,132 @@
+/* Basic reset for cleaner layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #89fffd, #ef32d9);
+  font-family: 'Indie Flower', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  color: #fff;
+}
+
+/* Container */
+.container {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: translateY(-10px);
+}
+
+/* Dice Section */
+.dice {
+  display: inline-block;
+  margin: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 6rem;
+  font-family: 'Lobster', cursive;
+  color: #ffd700;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+p {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffd700;
+}
+
+img {
+  width: 100px;
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+}
+
+/* Score Counter Styling */
+#score1, #score2 {
+  font-size: 3rem;
+  color: #fff;
+  background-color: #232931;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+/* Button Styling */
+button {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  background: #ffd700;
+  color: #232931;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: #ff9966;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes roll {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(360deg); }
+  100% { transform: rotate(720deg); }
+}
+
+.roll {
+  animation: roll 1s ease-out;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #1A1A1A;
+  color: #EEEEEE;
+}
+
+.dark-mode h1, .dark-mode p, .dark-mode footer {
+  color: #ffcc00;
+}
+
+.dark-mode button {
+  background: #ffcc00;
+  color: #000;
+}
+
+.dark-mode button:hover {
+  background: #ff9966;
+  color: white;
+}
